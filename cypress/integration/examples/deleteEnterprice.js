@@ -1,4 +1,4 @@
-let rutEmpresa = '76.428.275-2'
+let rutEmpresa = '76.350.946-K'
 let username = 'bsegura@informat.cl'
 let password = 'uwigo2511'
 

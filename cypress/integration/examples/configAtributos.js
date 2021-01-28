@@ -86,7 +86,7 @@
          cy.wait(6000)
       })
    })
-   */
+   
 
    it('ATRIBUTOS PROVEEDORES', function() 
       {
@@ -153,19 +153,19 @@
    
       })
    
-
+*/
       it ('Editar Cuenta Contable ',function() // Asociación Atributos (CC -Item) a Cuentas Contables
       {
           cy.get('a > span').contains('Configuración').click()
           cy.get('a[href*="plan-cuenta"]').contains('Plan de Cuenta').click()
-          cy.wait(2000)
+          cy.wait(4000)
           //variables Buscar Cuentas y Asignar Atributo
           var genArr = Array.from({length:8},(v,k)=>k+1) 
           var Cuenta_Ctble = ['61.01.10','61.01.20','61.04.10','61.04.25','61.04.30','62.01.10','51.01.10','51.01.20']
           
           cy.wrap(genArr).each((index) =>
           {
-                
+          cy.scrollTo('top',{ensureScrollable: false})      
           cy.get('#tabla-plan-cuenta_filter').type(Cuenta_Ctble[index-1])
           cy.wait(1000)
           cy.get('#tabla-plan-cuenta > tbody > tr > td:nth-child(3) > a').click()

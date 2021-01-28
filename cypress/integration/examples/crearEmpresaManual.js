@@ -3,6 +3,7 @@ let password = 'uwigo2511'
 let rutEmpresa = '764282752'
 let siiPass = 'jorge12'
 let rutEmpresa2 = '764282752'
+let usuarioSii = '76.428.275-2'
 
 describe('probanding', function() 
 {   
@@ -34,6 +35,7 @@ describe('probanding', function()
     { 
      cy.get('a[href="#m-seleccionar-empresa-2"]').click()
      cy.get('#id_rut_empresa_sii').type(rutEmpresa)
+     cy.get('#id_rut_usuario_sii').type(usuarioSii)
      cy.get('#id_usuario_clave_sii').type(siiPass)
      cy.contains('Manual').click()
      cy.wait(2000)
